@@ -114,6 +114,6 @@ function! g:TakolineMode()
     \   }
   return get(l:mode_map, mode(), "BLACK MAGIC")
 endfunction
-hi User1 ctermbg=168 ctermfg=15 guibg=black guifg=white
+hi User1 ctermbg=133 ctermfg=15 guibg=black guifg=white
 hi User2 ctermbg=237 ctermfg=15 guibg=black guifg=white
 hi User3 ctermbg=248 ctermfg=232 guibg=black guifg=white
