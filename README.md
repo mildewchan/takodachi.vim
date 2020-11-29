@@ -9,11 +9,7 @@ Use whichever plugin manager you like. I'm partial to
 
 1. Add `Plug 'mildewchan/takodachi.vim'` to .vimrc in `call plug#begin` block
 2. Run `:PlugInstall`
-
-## Loading the colorscheme
-
-1. Call `colorscheme takodachi` in .vimrc
-2. That's it. You're done.
+3. Call `colorscheme takodachi` in .vimrc, or manually (for some reason)
 
 ## Custom statusline
 This colorscheme includes theming and a helper function for a custom statusline,
