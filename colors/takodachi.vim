@@ -114,7 +114,7 @@ function! g:TakolineMode()
     \   }
   return get(l:mode_map, mode(), "BLACK MAGIC")
 endfunction
-let g:takoline="%1*\ %{StatuslineMode()}\ %2*\ %f\ %m%=%{&ff}\ \|\ %{strlen(&fenc)?&fenc:'none'}\ %3\ %l:%L*\ "
+let g:takoline="%1*\ %{TakolineMode()}\ %2*\ %f\ %m%=%{&ff}\ \|\ %{strlen(&fenc)?&fenc:'none'}\ %3\ %l:%L*\ "
 hi User1 ctermbg=168 ctermfg=15 guibg=black guifg=white
 hi User2 ctermbg=237 ctermfg=15 guibg=black guifg=white
 hi User3 ctermbg=248 ctermfg=232 guibg=black guifg=white
