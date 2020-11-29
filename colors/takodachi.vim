@@ -105,6 +105,15 @@ hi TabLine guifg=#192224 guibg=#af5faf guisp=#af5faf gui=bold ctermfg=235 ctermb
 hi cursorim guifg=#192224 guibg=#536991 guisp=#536991 gui=NONE ctermfg=235 ctermbg=60 cterm=NONE
 
 " takoline
+function! g:TakolineMode()
+  let l:mode_map = {
+    \ 'n': 'NORMAL', 'i': 'INSERT', 'R': 'REPLACE',
+    \ 'v': 'VISUAL', 'V': 'V-LINE', "\<C-v>": 'V-BLOCK',
+    \ 'c': 'COMMAND', 's': 'SELECT', 'S': 'S-LINE',
+    \ "\<C-s>": 'S-BLOCK', 't': 'TERMINAL',
+    \   }
+  return get(l:mode_map, mode(), "BLACK MAGIC")
+endfunction
 let g:takoline="%1*\ %{StatuslineMode()}\ %2*\ %f\ %m%=%{&ff}\ \|\ %{strlen(&fenc)?&fenc:'none'}\ %3\ %l:%L*\ "
 hi User1 ctermbg=168 ctermfg=15 guibg=black guifg=white
 hi User2 ctermbg=237 ctermfg=15 guibg=black guifg=white
