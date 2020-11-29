@@ -12,8 +12,8 @@ Use whichever plugin manager you like. I'm partial to
 
 ## Loading the colorscheme
 
-0. Call `colorscheme takodachi` in .vimrc
-1. That's it. You're done.
+1. Call `colorscheme takodachi` in .vimrc
+2. That's it. You're done.
 
 ## Custom statusline
 This colorscheme includes theming and a helper function for a custom statusline,
