@@ -103,3 +103,9 @@ hi Underlined guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=18
 hi DiffAdd guifg=NONE guibg=#193224 guisp=#193224 gui=NONE ctermfg=NONE ctermbg=236 cterm=NONE
 hi TabLine guifg=#192224 guibg=#af5faf guisp=#af5faf gui=bold ctermfg=235 ctermbg=133 cterm=bold
 hi cursorim guifg=#192224 guibg=#536991 guisp=#536991 gui=NONE ctermfg=235 ctermbg=60 cterm=NONE
+
+" takoline
+let g:takoline="%1*\ %{StatuslineMode()}\ %2*\ %f\ %m%=%{&ff}\ \|\ %{strlen(&fenc)?&fenc:'none'}\ %3\ %l:%L*\ "
+hi User1 ctermbg=168 ctermfg=15 guibg=black guifg=white
+hi User2 ctermbg=237 ctermfg=15 guibg=black guifg=white
+hi User3 ctermbg=248 ctermfg=232 guibg=black guifg=white
