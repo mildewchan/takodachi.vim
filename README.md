@@ -25,13 +25,14 @@ set noshowmode
 ```
 
 ## Note for thinkpad users
-If you're using a thinkpad with a shitty TN panel (like I was when I wrote the
-early versions of this plugin), this theme will look better with stronger
-colors.
+If you're using a thinkpad with a shitty TN panel (like I am writing this 
+plugin), this theme might look better with stronger colors to compensate
+for the display washing them out.
 
-Put this in your ~/.vimrc before loading with `colorscheme takodachi`:
+If you want to do this, load the colorscheme like this:
 ```
 let g:shitty_display=1
+colorscheme takodachi
 ```
 
 ## Plugin integration
