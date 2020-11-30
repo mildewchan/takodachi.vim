@@ -24,6 +24,16 @@ set laststatus=2
 set noshowmode
 ```
 
+## Note for thinkpad users
+If you're using a thinkpad with a shitty TN panel (like I was when I wrote the
+early versions of this plugin), this theme will look better with stronger
+colors.
+
+Put this in your ~/.vimrc before loading with `colorscheme takodachi`:
+```
+let g:shitty_display=1
+```
+
 ## Plugin integration
 Support for plugins will be added in the future either for plugins I
 use, and/or for plugins used by people willing to submit a merge request

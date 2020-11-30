@@ -105,25 +105,28 @@ endif
 " this set of colors is the heart and soul of the theme.
 " xterm color reference: https://jonasjacek.github.io/colors/
 let s:tako_colors_256 = {
-  \ 'Black': 16,
-  \ 'White': 189,
-  \ 'Orange': 216,
-  \ 'LightGrey': 237,
-  \ 'BlueSlateGrey': 103,
-  \ 'SilverGrey': 248,
-  \ 'BackgroundGrey': 235,
-  \ 'PaleTurquoise': 66,
-  \ 'SoftPink': 181,
-  \ 'MediumPurple': 140,
-  \ 'StrongPurple': 133,
-  \ 'Magenta': 168
+  \ 'Black': [16, 16],
+  \ 'White': [231, 231],
+  \ 'Orange': [216, 216],
+  \ 'LightGrey': [237, 237],
+  \ 'BlueSlateGrey': [103, 103],
+  \ 'SilverGrey': [248, 248],
+  \ 'BackgroundGrey': [235, 235],
+  \ 'PaleTurquoise': [66, 66],
+  \ 'SoftPink': [182, 181],
+  \ 'MediumPurple': [146, 140],
+  \ 'StrongPurple': [140, 133],
+  \ 'Magenta': [168, 168],
   \ }
 
+
 function! s:hi(item, fg, bg)
+  " use stronger colors if this is set to 1 in .vimrc
+  let l:i = get(g:, 'shitty_display', 0)
   " default -> bright red -> undefined behavior
-  let l:fg_xterm = (a:fg=='NONE')?'NONE':get(s:tako_colors_256, a:fg, 160)
+  let l:fg_xterm = (a:fg=='NONE')?'NONE':get(s:tako_colors_256, a:fg, 160)[l:i]
   let l:fg_rgb = (a:fg=='NONE')?'NONE':get(s:rgb_map, l:fg_xterm, '#d70000')
-  let l:bg_xterm = (a:bg=='NONE')?'NONE':get(s:tako_colors_256, a:bg, 160) 
+  let l:bg_xterm = (a:bg=='NONE')?'NONE':get(s:tako_colors_256, a:bg, 160)[l:i]
   let l:bg_rgb = (a:bg=='NONE')?'NONE':get(s:rgb_map, l:bg_xterm, '#d70000')
   execute printf("highlight %s ctermfg=%s ctermbg=%s guifg=%s guibg=%s 
                 \ guisp=%s",
@@ -148,7 +151,7 @@ call s:hi("Float", "SilverGrey", "NONE")
 call s:hi("StatusLineNC", "NONE", "StrongPurple")
 call s:hi("NonText", "PaleTurquoise", "NONE")
 call s:hi("DiffText", "White", "Orange")
-call s:hi("ErrorMsg", "NONE", "Orange")
+call s:hi("ErrorMsg", "Black", "Orange")
 call s:hi("Debug", "Orange", "NONE")
 call s:hi("PMenuSbar", "NONE", "BlueSlateGrey")
 call s:hi("Identifier", "StrongPurple", "NONE")
