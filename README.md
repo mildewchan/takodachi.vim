@@ -25,8 +25,8 @@ set noshowmode
 ```
 
 ## Note for thinkpad users
-If you're using a thinkpad with a shitty TN panel (like I am writing this 
-plugin), this theme might look better with stronger colors to compensate
+If you're using a thinkpad with a shitty TN panel (like I am),
+this theme might look better with stronger colors to compensate
 for the display washing them out.
 
 If you want to do this, load the colorscheme like this:
