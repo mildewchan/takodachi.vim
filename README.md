@@ -23,3 +23,9 @@ set statusline=%1*\ %{TakolineMode()}\ %2*\ %f\ %m\ %r%=\ %{&ff}\ \|\ %{strlen(&
 set laststatus=2
 set noshowmode
 ```
+
+## Plugin integration
+Support for plugins will be added in the future either for plugins I
+use, and/or for plugins used by people willing to submit a merge request
+with a nice-looking implementation that sticks to the original set of
+colors.
