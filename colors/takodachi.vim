@@ -119,7 +119,6 @@ let s:tako_colors_256 = {
   \ 'Magenta': [168, 168],
   \ }
 
-
 function! s:hi(item, fg, bg)
   " use stronger colors if this is set to 1 in .vimrc
   let l:i = get(g:, 'shitty_display', 0)
@@ -237,7 +236,7 @@ function! g:TakolineMode()
     \   }
   return get(l:mode_map, mode(), "BLACK MAGIC")
 endfunction
-hi User1 ctermbg=133 ctermfg=15 guibg=black guifg=white
-hi User2 ctermbg=237 ctermfg=15 guibg=black guifg=white
-hi User3 ctermbg=248 ctermfg=232 guibg=black guifg=white
+call s:hi("User1", "White", "StrongPurple")
+call s:hi("User2", "White", "LightGrey")
+call s:hi("User3", "Black", "SilverGrey")
 
