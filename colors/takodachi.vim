@@ -117,6 +117,9 @@ let s:tako_colors_256 = {
   \ 'MediumPurple': [146, 140],
   \ 'StrongPurple': [140, 133],
   \ 'Magenta': [168, 168],
+  \ 'DiffChange': [59],
+  \ 'DiffText': [95],
+  \ 'DiffAdd': [65],
   \ }
 
 function! s:hi(item, fg, bg)
@@ -149,7 +152,10 @@ call s:hi("Include", "Magenta", "NONE")
 call s:hi("Float", "SilverGrey", "NONE")
 call s:hi("StatusLineNC", "NONE", "StrongPurple")
 call s:hi("NonText", "PaleTurquoise", "NONE")
-call s:hi("DiffText", "Black", "Orange")
+call s:hi("DiffChange", "NONE", "DiffChange")
+call s:hi("DiffAdd", "White", "DiffAdd")
+call s:hi("DiffText", "NONE", "DiffText")
+call s:hi("DiffDelete", "NONE", "BackgroundGrey")
 call s:hi("ErrorMsg", "Black", "Orange")
 call s:hi("Debug", "Orange", "NONE")
 call s:hi("PMenuSbar", "NONE", "BlueSlateGrey")
@@ -179,7 +185,6 @@ call s:hi("PMenu", "White", "LightGrey")
 call s:hi("PMenuSel", "Black", "Orange")
 call s:hi("WarningMsg", "Black", "Orange")
 call s:hi("VisualNOS", "BackgroundGrey", "White")
-call s:hi("DiffDelete", "NONE", "BackgroundGrey")
 call s:hi("ModeMsg", "White", "BackgroundGrey")
 call s:hi("CursorColumn", "NONE", "BackgroundGrey")
 call s:hi("Define", "Magenta", "NONE")
@@ -193,7 +198,6 @@ call s:hi("VertSplit", "BackgroundGrey", "PaleTurquoise")
 call s:hi("Exception", "Magenta", "NONE")
 call s:hi("Keyword", "StrongPurple", "NONE")
 call s:hi("Type", "MediumPurple", "NONE")
-call s:hi("DiffChange", "White", "StrongPurple")
 call s:hi("Cursor", "BackgroundGrey", "White")
 call s:hi("SpellLocal", "White", "BackgroundGrey")
 call s:hi("Error", "Black", "Orange")
@@ -209,7 +213,6 @@ call s:hi("Directory", "SilverGrey", "NONE")
 call s:hi("Structure", "SilverGrey", "NONE")
 call s:hi("Macro", "Magenta", "NONE")
 call s:hi("Underlined", "White", "BackgroundGrey")
-call s:hi("DiffAdd", "NONE", "BackgroundGrey")
 call s:hi("cursorim", "BackgroundGrey", "BlueSlateGrey")
 "hi CTagsMember -- no settings --
 "hi CTagsGlobalConstant -- no settings --
