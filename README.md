@@ -34,6 +34,15 @@ set laststatus=2
 set noshowmode
 ```
 
+## Bundled tmux theme
+This colorscheme comes bundled with a tmux theme for a consistent look
+across your terminal emulator.
+
+To use it, just add this line to your tmux.conf:
+```
+source-file "$HOME/{{where_you_keep_vim_plugins}}/takodachi.vim/tmux/theme.conf
+```
+
 ## Note for thinkpad users
 If you're using a thinkpad with a shitty TN panel (like I was while developing this),
 this theme might look better with stronger colors to compensate for the display washing them out.
